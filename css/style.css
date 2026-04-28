@@ -343,6 +343,8 @@ img {
     z-index: 100000;
 
     box-shadow: 0 10px 30px rgba(255, 94, 0, 0.35);
+
+    overflow: hidden;
 }
 
 /* ================= SOCIAL BUTTONS ================= */
@@ -389,7 +391,7 @@ img {
     margin-top: 20px;
     padding: 14px 20px;
 
-    border-radius: 14px;
+    border-radius: 10px;
 
     background: linear-gradient(135deg, #ff5e00, #ff3b00);
     color: #000;
@@ -404,7 +406,7 @@ img {
 @media (max-width: 768px) {
 
     body {
-        padding-top: 65px;
+        padding-top: 70px;
     }
 
     .footer-grid {
@@ -422,4 +424,36 @@ img {
 @keyframes scrollReviews {
     from { transform: translateX(0%); }
     to { transform: translateX(-50%); }
+}
+
+
+/* ================= MOBILE: 2 CARDS PER ROW ================= */
+
+@media (max-width: 768px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .item {
+        height: 300px;
+    }
+
+    .item-overlay h4 {
+        font-size: 0.9rem;
+    }
+
+    .item-back p {
+        font-size: 0.75rem;
+    }
+
+    .price {
+        font-size: 1.1rem;
+    }
+}
+
+.floating-call svg {
+    width: 45px;
+    height: 45px;
 }
